@@ -11,7 +11,7 @@ var ManagementClient = require('auth0').ManagementClient;
 var auth0Client = new ManagementClient({
   domain: 'dev-njufz051.us.auth0.com',
   clientId: "XKdxLFrHMbdHNBLCj4h6ZMzUnx7TbH6d",
-  clientSecret: process.env.CLIENT_SECRET,
+  clientSecret: "KGQo4Tst1ysJlk2AK1I5K6wxEVzamyCt10N8eISqRzod0sJLj_F8ZsB4amTkUfB5",
   audience: "https://dev-njufz051.us.auth0.com/api/v2/",
   scope: 'update:users_app_metadata',
   scope: 'read:users'
