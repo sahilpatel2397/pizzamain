@@ -11,7 +11,7 @@ const checkJwt = jwt({
     }),
 
     audience: "https://express.pizza",
-    issuer: `https://dev-njufz051.us.auth0.com/.well-known/jwks.json`,
+    issuer: `https://dev-njufz051.us.auth0.com/`,
     algorithms: ['RS256'],
 });
 
