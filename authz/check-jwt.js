@@ -7,11 +7,11 @@ const checkJwt = jwt({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: `https://${domain}/.well-known/jwks.json`,
+        jwksUri: `https://dev-njufz051.us.auth0.com/.well-known/jwks.json`,
     }),
 
-    audience: audience,
-    issuer: `https://${domain}/`,
+    audience: "https://express.pizza",
+    issuer: `https://dev-njufz051.us.auth0.com/.well-known/jwks.json`,
     algorithms: ['RS256'],
 });
 
