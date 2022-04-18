@@ -55,6 +55,9 @@ messagesRouter.post("/placeorders",checkJwt, async (req, res) => {
   detail = req.body
   
   try {
+   let isVerfified =  (await auth0Client.getUser({id})).email_verified
+   if(!isVerfified)
+      return res.status(401, {error: "Email not Verified"});
    let metadata = await auth0Client.getUser({ id }).then(user => user.user_metadata || {})
   /* const detail = {
     "typ2":"pepperoni, italian"
